@@ -1,3 +1,17 @@
+# Project 4 – Word Puzzle
+#
+# Name: Dominic Gaiero and Russell Caletena
+# Instructor: S. Einakian
+# Section: 05
+
+
+'''
+Steps:
+    Read the input file
+    split the words into a list.
+    Add the puzzle words and puzzle letters to a dictionary
+    return dictionary
+'''
 def readFile():
     puzzleLetters = input("")
     puzzleWords = input("")
@@ -9,7 +23,11 @@ def readFile():
     }
     return puzzleInformation
 
-
+'''
+Steps:
+    Read the letters.
+    Print the list into a 10x10 matrix.
+'''
 def readLetters(puzzleLetters):
     letters = puzzleLetters
     lettersList = list(letters)
