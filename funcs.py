@@ -26,6 +26,16 @@ def readFile():
     return puzzleInformation
 
 
+
+def formatLetters(puzzleLetters):
+    mainList = []
+    for i in range(0, 100, 10):
+        tempString = ''
+        for j in range(10):
+            tempString += (puzzleLetters[i + j])
+
+        mainList.append(tempString)
+    return mainList
 '''
 Steps:
     Read the letters.
@@ -37,9 +47,9 @@ def readLetters(puzzleLetters):
     letters = puzzleLetters
     lettersList = list(letters)
     print("Puzzle: \n")
-    for i in range(0, 100, 10):
+    for i in range(10):
         for j in range(10):
-            print(lettersList[i + j], end="")
+            print(lettersList[i][j], end="")
         print()
 
 
@@ -50,4 +60,5 @@ if __name__ == "__main__":
     fileInfo = readFile()
     puzzleWords = fileInfo['puzzleWords']
     puzzleLetters = fileInfo['puzzleLetters']
+    puzzleLetters = formatLetters(puzzleLetters)
     readLetters(puzzleLetters)
