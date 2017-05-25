@@ -52,6 +52,8 @@ def readLetters(puzzleLetters):
             print(lettersList[i][j], end="")
         print()
 
+def checkLetters():
+
 
 '''
 For testing purposes. Delete for final rev.
