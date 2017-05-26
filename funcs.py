@@ -44,7 +44,7 @@ Steps:
 '''
 
 
-def readLetters(puzzleLetters):
+def printBoard(puzzleLetters):
     letters = puzzleLetters
     lettersList = list(letters)
     print("Puzzle: \n")
@@ -82,6 +82,14 @@ def checkLetters(lst, words, direction, reverse):
     masterList = [wordsFound, wordsList]
     print(masterList)
 
+def makeRows(lst):
+    masterList = []
+    for i in range(10):
+        newList = []
+        for j in range(10):
+            newList.append(lst[j][i])
+        masterList.append(newList)
+    return masterList
 
 '''
 For testing purposes. Delete for final rev.
@@ -91,5 +99,6 @@ if __name__ == "__main__":
     puzzleWords = fileInfo['puzzleWords']
     puzzleLetters = fileInfo['puzzleLetters']
     puzzleLetters = formatLetters(puzzleLetters)
-    readLetters(puzzleLetters)
+    printBoard(puzzleLetters)
+    printBoard(makeRows(puzzleLetters))
     checkLetters(puzzleLetters, puzzleWords, 1, 1)
