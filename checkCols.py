@@ -28,5 +28,5 @@ if __name__ == "__main__":
     puzzleWords = fileInfo['puzzleWords']
     puzzleLetters = fileInfo['puzzleLetters']
     puzzleLetters = formatLetters(puzzleLetters)
-    readLetters(puzzleLetters)
+    printBoard(puzzleLetters)
     checkCols(puzzleLetters)
