@@ -4,6 +4,14 @@
 # Instructor: S. Einakian
 # Section: 05
 
+ #     #                         ######
+ #  #  #  ####  #####  #####     #     # #    # ###### ###### #      ######
+ #  #  # #    # #    # #    #    #     # #    #     #      #  #      #
+ #  #  # #    # #    # #    #    ######  #    #    #      #   #      #####
+ #  #  # #    # #####  #    #    #       #    #   #      #    #      #
+ #  #  # #    # #   #  #    #    #       #    #  #      #     #      #
+  ## ##   ####  #    # #####     #        ####  ###### ###### ###### ######
+
 
 '''
 Steps:
@@ -60,6 +68,16 @@ def printBoard(puzzleLetters):
         for j in range(10):
             print(lettersList[i][j], end="")
         print()
+
+'''
+Steps:
+    Take input list
+    Iterate through input list and create a temporary string
+    Take the same index of each item in the list and add to temporary string
+    Append each temporary string to the list
+    Return the list
+'''
+
 
 def makeRows(L):
     i = 0
@@ -130,48 +148,16 @@ def checkLetters(lst, words, direction, reverse, masterList):
     masterList = [wordsFound, wordsList]
     return masterList
 
+
+'''
+Steps:
+    Take input string.
+    Slice the string (whole thing and step by -1)
+    Return reverse words
+'''
+
 def reverseWords(words):
     reverseWords = []
     for i in range(len(words)):
         reverseWords.append(words[i][::-1])
     return reverseWords
-
-
-'''
-For testing purposes. Delete for final rev.
-
-Declare wordsFound, wordsList, and the masterList.
-Run readFile to request user input on the puzzle parameters
-Declare puzzleWords and puzzleLetters from the output dictionary of readFile
-Format the puzzle letters in formatLetters.
-Reverse the words through reverseWords
-Format the list of letters through makeRows
-Run through masterList for:
-    1. Horiz and normal
-    2. Horix and reverse
-    3. Vert and normal
-    4. Vert and reverse
-
-'''
-if __name__ == "__main__":
-    wordsFound = []
-    wordsList = []
-    masterList = []
-    fileInfo = readFile()
-    puzzleWords = fileInfo['puzzleWords']
-    puzzleLetters = fileInfo['puzzleLetters']
-    puzzleLetters = formatLetters(puzzleLetters)
-    puzzleLettersRow = makeRows(puzzleLetters)
-    printBoard(puzzleLetters)
-    puzzleWordsReversed = reverseWords(puzzleWords)
-    # Horiz and normal
-    masterList = checkLetters(puzzleLetters, puzzleWords, 1, 0, masterList)
-    # Horiz and reverse
-    masterList = checkLetters(
-        puzzleLetters, puzzleWordsReversed, 1, 1, masterList)
-    # Vert and normal
-    masterList = checkLetters(puzzleLettersRow, puzzleWords, 2, 0, masterList)
-    # Vert and reverse
-    masterList = checkLetters(
-        puzzleLettersRow, puzzleWordsReversed, 2, 1, masterList)
-    print(masterList)
