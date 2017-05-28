@@ -106,6 +106,8 @@ Steps:
 
 
 def checkLetters(lst, words, direction, reverse, masterList):
+    wordsFound = masterList[0]
+    wordsList = masterList[1]
     for i in range(10):
         for j in range(len(words)):
             if words[j] in lst[i]:

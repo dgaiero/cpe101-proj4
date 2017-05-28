@@ -34,11 +34,12 @@ Run through masterList for:
 if __name__ == "__main__":
     wordsFound = []
     wordsList = []
-    masterList = []
+    masterList = [wordsFound, wordsList]
     fileInfo = readFile()
     puzzleWords = fileInfo['puzzleWords']
     puzzleLetters = fileInfo['puzzleLetters']
     puzzleLetters = formatLetters(puzzleLetters)
+    print(puzzleLetters)
     puzzleLettersRow = makeRows(puzzleLetters)
     printBoard(puzzleLetters)
     puzzleWordsReversed = reverseWords(puzzleWords)
