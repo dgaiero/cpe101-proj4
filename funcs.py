@@ -88,8 +88,8 @@ def checkLetters(lst, words, direction, reverse, masterList):
                     'reverse': ''
                 }
                 if direction == 1:
-                    xLoc = lst[i].find(words[j]) + 1
-                    yLoc = i + 1
+                    xLoc = lst[i].find(words[j])
+                    yLoc = i
                 else:
                     xLoc = lst[i].find(words[j]) + 1
                     yLoc = i + 1
