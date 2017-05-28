@@ -61,6 +61,17 @@ def printBoard(puzzleLetters):
             print(lettersList[i][j], end="")
         print()
 
+def makeRows(L):
+    i = 0
+    tempL = []
+    while i in range(len(L)):
+        tempString = ''
+        for item in L:
+            tempString+=item[i]
+        tempL.append (''.join(tempString))
+        i += 1
+    return tempL
+
 
 '''
 Steps:
