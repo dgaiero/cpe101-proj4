@@ -99,11 +99,20 @@ def checkLetters(lst, words, direction, reverse, masterList):
                     'reverse': ''
                 }
                 if direction == 1:
-                    xLoc = lst[i].find(words[j])
-                    yLoc = i
+                    if reverse == 0:
+                        col = lst[i].find(words[j])
+                        row = i
+                    else:
+                        col = lst[i].find(words[j]) + len(words[j]) -1
+                        row = i
                 else:
-                    xLoc = lst[i].find(words[j]) + 1
-                    yLoc = i + 1
+                    if reverse == 0:
+                        row = lst[i].find(words[j])
+                        col = i
+                    else:
+                        row = lst[i].find(words[j]) + len(words[j]) -1
+                        col = i
+
                 if reverse == 0:
                     wordsFound.append(words[j])
                     wordDict['word'] = words[j]
@@ -111,8 +120,8 @@ def checkLetters(lst, words, direction, reverse, masterList):
                     wordsFound.append(words[j][::-1])
                     wordDict['word'] = words[j][::-1]
 
-                wordDict['row'] = yLoc
-                wordDict['col'] = xLoc
+                wordDict['row'] = row
+                wordDict['col'] = col
                 wordDict['dir'] = direction
                 wordDict['reverse'] = reverse
                 wordsList.append(wordDict)
@@ -153,7 +162,6 @@ if __name__ == "__main__":
     puzzleLetters = fileInfo['puzzleLetters']
     puzzleLetters = formatLetters(puzzleLetters)
     puzzleLettersRow = makeRows(puzzleLetters)
-    print(puzzleLettersRow)
     printBoard(puzzleLetters)
     puzzleWordsReversed = reverseWords(puzzleWords)
     # Horiz and normal
