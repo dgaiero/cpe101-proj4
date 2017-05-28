@@ -110,16 +110,6 @@ def checkLetters(lst, words, direction, reverse, masterList):
     masterList = [wordsFound, wordsList]
     return masterList
 
-def makeRows(lst):
-    masterList = []
-    for i in range(10):
-        newString = ''
-        for j in range(10):
-            newString += lst[j][i]
-        masterList.append(newString)
-    return masterList
-
-
 def reverseWords(words):
     reverseWords = []
     for i in range(len(words)):
