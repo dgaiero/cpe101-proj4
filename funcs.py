@@ -3,6 +3,7 @@
 # Name: Dominic Gaiero and Russell Caletena
 # Instructor: S. Einakian
 # Section: 05
+# https://github.com/dgaiero/cpe101-proj4
 
  #     #                         ######
  #  #  #  ####  #####  #####     #     # #    # ###### ###### #      ######
@@ -12,6 +13,14 @@
  #  #  # #    # #   #  #    #    #       #    #  #      #     #      #
   ## ##   ####  #    # #####     #        ####  ###### ###### ###### ######
 
+ #######
+ #       #    # #    #  ####  ##### #  ####  #    #  ####
+ #       #    # ##   # #    #   #   # #    # ##   # #
+ #####   #    # # #  # #        #   # #    # # #  #  ####
+ #       #    # #  # # #        #   # #    # #  # #      #
+ #       #    # #   ## #    #   #   # #    # #   ## #    #
+ #        ####  #    #  ####    #   #  ####  #    #  ####
+
 
 '''
 Steps:
@@ -19,13 +28,13 @@ Steps:
     split the words into a list.
     Add the puzzle words and puzzle letters to a dictionary
     return dictionary with the puzzle information
+Function completed by:
 '''
 
 
 def readFile():
     puzzleLetters = input("")
     puzzleWords = input("")
-    print()
     puzzleWords = puzzleWords.split(" ")
     puzzleInformation = {
         'puzzleWords': puzzleWords,
@@ -39,6 +48,7 @@ Steps:
     Required args: input string
     breaks string into groups of ten
     returns a list with ten items.
+Function completed by:
 '''
 
 
@@ -57,17 +67,19 @@ def formatLetters(puzzleLetters):
 Steps:
     Read the letters.
     Print the list into a 10x10 matrix.
+Function completed by:
 '''
 
 
 def printBoard(puzzleLetters):
     letters = puzzleLetters
     lettersList = list(letters)
-    print("Puzzle: \n")
+    print("Puzzle:\n")
     for i in range(10):
         for j in range(10):
             print(lettersList[i][j], end="")
         print()
+    print()
 
 '''
 Steps:
@@ -76,6 +88,7 @@ Steps:
     Take the same index of each item in the list and add to temporary string
     Append each temporary string to the list
     Return the list
+Function completed by:
 '''
 
 
@@ -102,6 +115,7 @@ Steps:
     Returns a list with two items
         1. Words Found
         2. List with dictionaries of all required information.
+Function completed by:
 '''
 
 
@@ -156,6 +170,7 @@ Steps:
     Take input string.
     Slice the string (whole thing and step by -1)
     Return reverse words
+Function completed by: 
 '''
 
 def reverseWords(words):
