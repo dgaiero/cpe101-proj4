@@ -152,9 +152,9 @@ if __name__ == "__main__":
     puzzleWords = fileInfo['puzzleWords']
     puzzleLetters = fileInfo['puzzleLetters']
     puzzleLetters = formatLetters(puzzleLetters)
-    print (puzzleWords)
+    #print (puzzleWords)
     puzzleLettersRow = makeRows(puzzleLetters)
-    #print(puzzleLettersRow) #Removed to match ouput0
+    #print(puzzleLettersRow) #Removed to match output0
     printBoard(puzzleLetters)
     puzzleWordsReversed = reverseWords(puzzleWords)
     # Horiz and normal
@@ -179,8 +179,6 @@ if __name__ == "__main__":
             print("{0}: (UP) row: {1} column: {2}".format(item['word'],item['row'],item['col']))
         else:
             print("{0}: word not found".format(item['word']))
-
     print ()
-
-    print ()
-    print(masterList)
+    #print ()
+    #print(masterList)
