@@ -1,3 +1,12 @@
+# Project 4 – Word Puzzle
+#
+# Name: Dominic Gaiero and Russell Caletena
+# Instructor: S. Einakian
+# Section: 05
+
+# ========================================================
+# Import libraries
+# ========================================================
 from funcs import *
 
 def checkRows(lst, words):
