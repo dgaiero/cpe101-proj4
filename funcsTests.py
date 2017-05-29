@@ -1,6 +1,6 @@
-# Project 3 - Tic-Tac-Toe Simulator
+# Project 4 - Word Searcher
 #
-# Name: Dominic Gaiero
+# Name: Dominic Gaiero and Russell Caletena
 # Instructor: S. Einakian
 # Section: 05
 
@@ -18,12 +18,15 @@ class TestCases(unittest.TestCase):
         # self.assertEqual(getNewLetter("O"), "X")
 
     def test_makeRows(self):
+        self.assertEqual(makeRows()
         pass
 
     def test_checkLetters(self):
+        self.assertEqual(checkLetters)
         pass
 
     def reverseWords(self):
+        self.assertEqual(reverseWords)
         pass
 
 
