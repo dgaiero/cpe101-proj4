@@ -44,6 +44,7 @@ def printOutput(puzzleWords, masterList):
                 elif masterList[1][j]["dir"] == 2 and masterList[1][j]["reverse"] == 1:
                     print("{0}: (UP) row: {1} column: {2}".format(
                         masterList[1][j]['word'], masterList[1][j]['row'], masterList[1][j]['col']))
+                break
             elif puzzleWords[i] not in masterList[0]:
                 print("{0}: word not found".format(puzzleWords[i]))
                 break
