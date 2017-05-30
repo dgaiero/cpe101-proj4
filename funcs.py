@@ -28,7 +28,7 @@ Steps:
     split the words into a list.
     Add the puzzle words and puzzle letters to a dictionary
     return dictionary with the puzzle information
-Function completed by:
+Function completed by: Dominic Gaiero
 '''
 
 
@@ -48,7 +48,7 @@ Steps:
     Required args: input string
     breaks string into groups of ten
     returns a list with ten items.
-Function completed by:
+Function completed by: Dominic Gaiero
 '''
 
 
@@ -67,7 +67,7 @@ def formatLetters(puzzleLetters):
 Steps:
     Read the letters.
     Print the list into a 10x10 matrix.
-Function completed by:
+Function completed by: Dominic Gaiero
 '''
 
 
@@ -88,7 +88,7 @@ Steps:
     Take the same index of each item in the list and add to temporary string
     Append each temporary string to the list
     Return the list
-Function completed by:
+Function completed by: Russell Caletena
 '''
 
 
@@ -115,7 +115,7 @@ Steps:
     Returns a list with two items
         1. Words Found
         2. List with dictionaries of all required information.
-Function completed by:
+Function completed by: Dominic Gaiero and Russell Caletena
 '''
 
 
@@ -170,7 +170,7 @@ Steps:
     Take input string.
     Slice the string (whole thing and step by -1)
     Return reverse words
-Function completed by: 
+Function completed by: Dominic Gaiero
 '''
 
 def reverseWords(words):

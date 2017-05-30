@@ -24,7 +24,7 @@ Step:
     2. Iterate through the words found
     3. If the origional word is in the list of words found, then print the information
     4. If it is not in the found list, then print that the word was not found.
-Function completed by:
+Function completed by: Russell Caletena
 '''
 
 
@@ -61,7 +61,7 @@ Run through masterList for:
     2. Horiz and reverse
     3. Vert and normal
     4. Vert and reverse
-Function completed by:
+Function completed by: Dominic Gaiero
 '''
 
 
