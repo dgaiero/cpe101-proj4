@@ -58,7 +58,6 @@ def formatLetters(puzzleLetters):
         tempString = ''
         for j in range(10):
             tempString += (puzzleLetters[i + j])
-
         mainList.append(tempString)
     return mainList
 
